@@ -26,4 +26,26 @@ class AppColors {
   static const grey200 = Color.fromRGBO(194, 207, 200, 1);
 
   static const green200 = Color.fromRGBO(235, 243, 232, 1);
+
+  static const paleGreen = Color.fromRGBO(221, 247, 194, 1);
+
+  static const pastelYellow = Color.fromRGBO(247, 245, 194, 1);
+
+  static const paleApricot = Color.fromRGBO(247, 223, 194, 1);
+
+  static const softSalmon = Color.fromRGBO(247, 204, 194, 1);
+
+  static const softPink = Color.fromRGBO(247, 194, 219, 1);
+
+  static const paleLavender = Color.fromRGBO(246, 194, 247, 1);
+
+  static const softPeriwinkle = Color.fromRGBO(208, 194, 247, 1);
+
+  static const softPowderBlue = Color.fromRGBO(194, 212, 247, 1);
+
+  static const softSky = Color.fromRGBO(194, 231, 247, 1);
+
+  static const paleTurquoise = Color.fromRGBO(194, 247, 247, 1);
+
+  static const greenMenthol = Color.fromRGBO(197, 247, 225, 1);
 }
