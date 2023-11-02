@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../../../common/bottom_menu/bottom_menu_widgets/bottom_navigation_menu.dart';
-import '../../../../common/styles/colors.dart';
-import '../../../../common/widgets/caution_button.dart';
-import '../../../../common/widgets/color_selection_grid.dart';
-import '../../../../common/widgets/counter_bar.dart';
-import '../../../../common/widgets/custom_tile.dart';
-import '../../../../common/widgets/expandable_data_tile.dart';
-import '../../../../common/widgets/expandable_settings_tile.dart';
-import '../../../../common/widgets/main_app_bar.dart';
-import '../../../../common/widgets/main_button.dart';
-import '../../../../common/widgets/main_dialog.dart';
-import '../../../../common/widgets/main_text_field.dart';
-import '../../../../common/widgets/toggle_tab.dart';
-import '../../../../constants/colors_selection_list.dart';
 
-// GENERATED CODE - DO NOT MODIFY BY HAND
+import '../../styles/colors.dart';
+import '../../widgets/caution_button.dart';
+import '../../widgets/color_selection_grid.dart';
+import '../../widgets/counter_bar.dart';
+import '../../widgets/intake_card/suplement_list_tile.dart';
+import '../../widgets/expandable_data_tile.dart';
+import '../../widgets/expandable_settings_tile.dart';
+import '../../widgets/main_button.dart';
+import '../../widgets/main_dialog.dart';
+import '../../widgets/main_text_field.dart';
+import '../../widgets/toggle_tab.dart';
+
+// TODO This is util class for development
 
 class WidgetsBox extends StatefulWidget {
   const WidgetsBox({super.key});
@@ -133,13 +131,7 @@ class _WidgetsBoxState extends State<WidgetsBox> {
           const SizedBox(
             height: 8,
           ),
-          const SupplementTile(
-            mealTime: 'With Breakfast',
-            supplement: 'D3 - 1600mg',
-            pillInfo: '1 Capsule - 800 mg',
-            times: 2,
-            pillStatus: 'Done at 06:30 AM',
-          ),
+          const SupplementTile(),
         ],
       ),
     );

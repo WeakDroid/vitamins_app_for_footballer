@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vitamins_app_for_footballer/ui/features/home/bloc/supplements_list_event.dart';
-import 'package:vitamins_app_for_footballer/ui/features/home/bloc/supplements_schedule_state.dart';
+import 'package:vitamins_app_for_footballer/ui/features/calendar/bloc/supplements_list_event.dart';
+import 'package:vitamins_app_for_footballer/ui/features/calendar/bloc/supplements_schedule_state.dart';
 import '../../../../core/data_result/data_result_processor.dart';
 import '../../../../domain/data_result/data_result.dart';
 import '../../../../domain/models/supplement.dart';

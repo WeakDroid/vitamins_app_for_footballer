@@ -3,10 +3,10 @@ import 'package:vitamins_app_for_footballer/data/repositories/supplements/supple
 import 'package:vitamins_app_for_footballer/data/repositories/supplements/supplements_repository_impl.dart';
 import 'package:vitamins_app_for_footballer/domain/use_cases/supplements_list/get_supplements_list_use_case.dart';
 import 'package:vitamins_app_for_footballer/domain/use_cases/supplements_list/get_supplements_list_use_case_impl.dart';
-import 'package:vitamins_app_for_footballer/ui/features/home/bloc/supplements_schedule_bloc.dart';
 import '../data/local/db/local_data_manager.dart';
 import '../data/local/db/local_data_manager_impl.dart';
-import '../ui/common/bottom_menu/cubit/bottom_navigation_cubit.dart';
+import '../ui/features/bottom_menu/cubit/bottom_navigation_cubit.dart';
+import '../ui/features/calendar/bloc/supplements_schedule_bloc.dart';
 
 GetIt locator = GetIt.instance;
 

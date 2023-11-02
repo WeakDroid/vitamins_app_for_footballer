@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/colors.dart';
-import 'package:vitamins_app_for_footballer/ui/common/styles/text_styles.dart';
+import 'package:vitamins_app_for_footballer/ui/common/utils/widgets/empty_space.dart';
+
+import '../../../../common/widgets/intake_card/intake_card.dart';
 
 class TodayScreen extends StatefulWidget {
   const TodayScreen({super.key});
@@ -16,17 +18,19 @@ class _TodayScreenState extends State<TodayScreen> {
   }
 
   Widget _buildScaffold() {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppColors.lightGrey,
       resizeToAvoidBottomInset: false,
       body: SafeArea(
-        child: Container(
-          child: const Center(
-            child: Text(
-              'Today screen’s place holder',
-              style: AppTextStyles.h1,
-            ),
-          ),
+        child: SingleChildScrollView(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IntakeCard(),
+                IntakeCard(),
+                IntakeCard(),
+                EmptySpace(height: 12)
+              ]),
         ),
       ),
     );
