@@ -6,7 +6,9 @@ import 'di/locator.dart';
 
 Future<void> main() async {
   await init();
-  runApp(const VitaminsApp());
+  runApp(
+    const VitaminsApp(),
+  );
 }
 
 init() async {
