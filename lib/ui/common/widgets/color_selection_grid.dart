@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/colors.dart';
 
+import '../../constants/colors_selection_list.dart';
+
 class ColorSelectionGrid extends StatefulWidget {
-  final List<Color> colors;
   final ValueChanged<Color?> onColorSelected;
+  final Color? initialColor;
 
   const ColorSelectionGrid(
-      {super.key, required this.colors, required this.onColorSelected});
+      {super.key, required this.onColorSelected, this.initialColor});
 
   @override
   _ColorSelectionGridState createState() => _ColorSelectionGridState();
@@ -14,13 +16,20 @@ class ColorSelectionGrid extends StatefulWidget {
 
 class _ColorSelectionGridState extends State<ColorSelectionGrid> {
   Color? _selectedColor;
+  final colors = ColorsSelectionColors.selectionColors;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedColor = widget.initialColor;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 8,
       runSpacing: 8,
-      children: widget.colors.map((color) => _buildColorTag(color)).toList(),
+      children: colors.map((color) => _buildColorTag(color)).toList(),
     );
   }
 

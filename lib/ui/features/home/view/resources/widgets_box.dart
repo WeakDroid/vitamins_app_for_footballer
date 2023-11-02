@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../common/bottom_menu/bottom_navigation_menu.dart';
+import '../../../../common/bottom_menu/bottom_menu_widgets/bottom_navigation_menu.dart';
 import '../../../../common/styles/colors.dart';
 import '../../../../common/widgets/caution_button.dart';
 import '../../../../common/widgets/color_selection_grid.dart';
@@ -12,7 +12,7 @@ import '../../../../common/widgets/main_button.dart';
 import '../../../../common/widgets/main_dialog.dart';
 import '../../../../common/widgets/main_text_field.dart';
 import '../../../../common/widgets/toggle_tab.dart';
-import 'colors_selection_colors_list.dart';
+import '../../../../constants/colors_selection_list.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
@@ -33,16 +33,6 @@ class _WidgetsBoxState extends State<WidgetsBox> {
     return Scaffold(
       backgroundColor: AppColors.lightGrey,
       resizeToAvoidBottomInset: false,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MainAppBar(
-          title: 'Pill Information',
-          onBackPress: () {},
-          onEdikPress: () {},
-          onMenuPress: () {},
-        ),
-      ),
-      bottomNavigationBar: const BottomNavigationMenu(),
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(16),
@@ -130,8 +120,8 @@ class _WidgetsBoxState extends State<WidgetsBox> {
             height: 16,
           ),
           ColorSelectionGrid(
-            colors: ColorsSelectionColors.selectionColors,
             onColorSelected: (Color? value) {},
+            initialColor: AppColors.green400,
           ),
           const SizedBox(
             height: 16,

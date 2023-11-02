@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import '../../../../common/styles/colors.dart';
+import 'dart:ui';
+import '../common/styles/colors.dart';
 
 class ColorsSelectionColors {
   static const List<Color> selectionColors = [

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/colors.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/text_styles.dart';
 
-class CalendarScreen extends StatefulWidget {
-  const CalendarScreen({super.key});
+class TodayScreen extends StatefulWidget {
+  const TodayScreen({super.key});
 
   @override
-  State<CalendarScreen> createState() => _CalendarScreenState();
+  State<TodayScreen> createState() => _TodayScreenState();
 }
 
-class _CalendarScreenState extends State<CalendarScreen> {
+class _TodayScreenState extends State<TodayScreen> {
   @override
   Widget build(BuildContext context) {
     return _buildScaffold();
@@ -23,7 +23,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
         child: Container(
           child: const Center(
             child: Text(
-              'Calendar’s place holder',
+              'Today screen’s place holder',
               style: AppTextStyles.h1,
             ),
           ),

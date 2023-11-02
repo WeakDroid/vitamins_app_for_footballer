@@ -6,6 +6,7 @@ import 'package:vitamins_app_for_footballer/domain/use_cases/supplements_list/ge
 import 'package:vitamins_app_for_footballer/ui/features/home/bloc/supplements_schedule_bloc.dart';
 import '../data/local/db/local_data_manager.dart';
 import '../data/local/db/local_data_manager_impl.dart';
+import '../ui/common/bottom_menu/cubit/bottom_navigation_cubit.dart';
 
 GetIt locator = GetIt.instance;
 
@@ -28,7 +29,11 @@ void _setupDomain() {
 }
 
 void _setupUi() {
-  locator.registerFactory<SupplementsScheduleBloc>(() => SupplementsScheduleBloc(
-        locator<GetSupplementsListUseCase>(),
-      ));
+  locator
+      .registerFactory<SupplementsScheduleBloc>(() => SupplementsScheduleBloc(
+            locator<GetSupplementsListUseCase>(),
+          ));
+
+  locator.registerLazySingleton<BottomNavigationCubit>(
+      () => BottomNavigationCubit());
 }

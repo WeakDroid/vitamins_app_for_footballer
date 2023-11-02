@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/colors.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/text_styles.dart';
+
+import '../cubit/bottom_navigation_cubit.dart';
 
 class BottomNavigationMenu extends StatefulWidget {
   const BottomNavigationMenu({Key? key}) : super(key: key);
@@ -10,20 +13,14 @@ class BottomNavigationMenu extends StatefulWidget {
 }
 
 class _BottomNavigationMenuState extends State<BottomNavigationMenu> {
-  int _currentIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
+    final currentIndex = context.select((BottomNavigationCubit cubit) => cubit.state);
     return BottomNavigationBar(
       backgroundColor: AppColors.green200,
-      currentIndex: _currentIndex,
-      onTap: _onItemTapped,
+      currentIndex: currentIndex,
+      onTap: (index) => context.read<BottomNavigationCubit>().navigateTo(index),
       selectedItemColor: AppColors.green600,
       unselectedItemColor: AppColors.grey400,
       selectedLabelStyle:
