@@ -20,10 +20,13 @@ dependencies:
   get_it: ^7.2.0
   shared_preferences: ^2.2.2
   path_provider: ^2.1.1
-  intl: ^0.18.1
   flutter_local_notifications: ^16.1.0
   flutter_dotenv: ^5.1.0
   freezed: ^2.4.5
+
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +40,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/
@@ -46,12 +50,8 @@ flutter:
       fonts:
         - asset:
             assets/fonts/RobotoFlex-Regular.ttf
-
-#    - family: AppIcons
-#      fonts:
-#        - asset:
-#            assets/fonts/icons/icomoon.ttf
-
+flutter_intl:
+  enabled: true
 
 
 
