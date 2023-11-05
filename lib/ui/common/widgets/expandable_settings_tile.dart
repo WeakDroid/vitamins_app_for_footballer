@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vitamins_app_for_footballer/ui/common/styles/text_styles.dart';
+import '../../../localization/generated/l10n.dart';
 import '../styles/colors.dart';
 
 class ExpandableSettingsTile extends StatefulWidget {
@@ -21,8 +22,8 @@ class _ExpandableSettingsTileState extends State<ExpandableSettingsTile> {
       ),
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(horizontal: 12),
-        title: const Text(
-          'Show Advanced Settings',
+        title:  Text(
+          S.of(context).showAdvancedSettings,
           style: AppTextStyles.body2,
         ),
         trailing: Icon(

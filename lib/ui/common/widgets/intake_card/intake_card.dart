@@ -4,7 +4,7 @@ import 'package:vitamins_app_for_footballer/ui/common/utils/widgets/empty_space.
 import 'package:vitamins_app_for_footballer/ui/common/widgets/intake_card/suplement_list_tile.dart';
 import 'package:vitamins_app_for_footballer/ui/common/widgets/main_button.dart';
 import 'package:vitamins_app_for_footballer/ui/common/widgets/outline_button.dart';
-
+import '../../../../localization/generated/l10n.dart';
 import '../../styles/colors.dart';
 
 //TODO Fill with real data
@@ -25,7 +25,7 @@ class IntakeCard extends StatelessWidget {
             border: Border.all(width: 0.6, color: AppColors.grey200)),
         child: Column(
           children: [
-            _buildPillStatusHeader(),
+            _buildPillStatusHeader(context),
             _buildSupplementsList(),
             _buildButtonRow(),
           ],
@@ -42,12 +42,12 @@ class IntakeCard extends StatelessWidget {
     ]);
   }
 
-  Widget _buildPillStatusHeader() {
+  Widget _buildPillStatusHeader(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
-          "On Waking",
+        Text(
+          S.of(context).pillWhenTakeOnWalking,
           style: AppTextStyles.body1,
         ),
         Container(
